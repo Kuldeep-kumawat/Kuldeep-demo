@@ -1,4 +1,4 @@
 # Kuldeep-demo
 this is my first repository
 <br>
-author - kuldeepkumawat
+author - kuldeep kumawat
