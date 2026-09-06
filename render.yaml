@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: hermes-24x7
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: HERMES_CUSTOM_KK_API_KEY
+        sync: false
+    autoDeploy: true
